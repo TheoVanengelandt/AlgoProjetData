@@ -8,10 +8,7 @@ Created on Mon Jul  1 10:55:52 2019
 # Python code to generate 
 # random numbers and random string
 import random
-import string
-
-# random GUID20
-import uuid
+import stringc
 
 # JSON lib
 import json
@@ -55,8 +52,6 @@ if not os.path.exists('data/'):
     os.makedirs('data/')
     
 # open and create a file
-# Create a file name with a UUID (Universally Unique IDentifier) 
-# uuid.uuid4().hex is a UUID generator (ex: '9fe2c4e93f654fdbb24c02b15259716c')
 print('Nom du fichier ?')
 fileName = input()
 dataFileName = str('data/'+ fileName + '.json')
