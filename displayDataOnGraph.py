@@ -25,7 +25,7 @@ try:
             
             plt.scatter(city['pos'][0], city['pos'][1])
          
-    plt.title('Nuage de points de' + fileName + ' avec Matplotlib')
+    plt.title('Nuage de points de ' + fileName + ' avec Matplotlib')
     plt.xlabel('x')
     plt.ylabel('y')
     
