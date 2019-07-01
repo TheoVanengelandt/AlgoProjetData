@@ -33,12 +33,13 @@ try:
         os.makedirs('graph/')
         
     
-    print('Sauvegarder le fichier sous ? (ex: monNomDeFichier) \nPS: le format est ajouté automatiquement :)')
+    print('Sauvegarder le graph créé sous ? (ex: monNomDeFichier) \nPS: le format est ajouté automatiquement :)')
     fileName = input()
     graphFileName = str('graph/'+ fileName + '.png')
     
     plt.savefig(graphFileName)
-    print("Le fichier de donnée a été généré") 
+    print("Le fichier de donnée a été généré")
+    input("Press Enter to close...")
     
     plt.show()
 
