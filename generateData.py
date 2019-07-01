@@ -17,7 +17,7 @@ import uuid
 import json
 
 # Path lib
-import os1
+import os
 
 def randomString(stringLength=10):
     """Generate a random string of fixed length """
