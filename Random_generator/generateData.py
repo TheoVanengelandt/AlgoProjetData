@@ -6,13 +6,16 @@ Created on Mon Jul  1 10:55:52 2019
 """
 
 # Python code to generate 
-# random numbers
+# random numbers and random string
 import random
 import string
-# random GUID
+
+# random GUID20
 import uuid
+
 # JSON lib
 import json
+
 # Path lib
 import os
 
@@ -43,9 +46,10 @@ data = {}
 # Add empty dictionary to 'cityList' key
 data['cityList'] = {}
   
-# Driver Code 
-valueNumber = 10
-Rand(data['cityList'], valueNumber)
+print('Nombre de ville à générer ?')
+valueNumber = input()
+
+Rand(data['cityList'], int(valueNumber))
 
 if not os.path.exists('data/'):
     os.makedirs('data/')
@@ -59,4 +63,4 @@ with open(dataFileName, 'a') as outfile:
     json.dump(data, outfile)
 
 
-print("data file name =", dataFileName) 
+print("Le fichier de donnée a été généré") 
