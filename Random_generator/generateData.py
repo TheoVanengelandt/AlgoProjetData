@@ -17,7 +17,7 @@ import uuid
 import json
 
 # Path lib
-import os
+import os1
 
 def randomString(stringLength=10):
     """Generate a random string of fixed length """
@@ -57,7 +57,9 @@ if not os.path.exists('data/'):
 # open and create a file
 # Create a file name with a UUID (Universally Unique IDentifier) 
 # uuid.uuid4().hex is a UUID generator (ex: '9fe2c4e93f654fdbb24c02b15259716c')
-dataFileName = str('data/dataFile_'+ str(uuid.uuid4().hex) + '.json')
+print('Nom du fichier ?')
+fileName = input()
+dataFileName = str('data/'+ fileName + '.json')
     
 with open(dataFileName, 'a') as outfile:  
     json.dump(data, outfile)
