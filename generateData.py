@@ -8,7 +8,7 @@ Created on Mon Jul  1 10:55:52 2019
 # Python code to generate 
 # random numbers and random string
 import random
-import stringc
+import string
 
 # JSON lib
 import json
