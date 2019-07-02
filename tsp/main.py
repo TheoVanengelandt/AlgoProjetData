@@ -22,7 +22,7 @@ except (OSError, IOError) as e:
      input("Press Enter to close...")
 
 
-pop = Population(50, True)
+pop = Population(RouteManager.numberOfDustbins(), True)
 print ('Initial distance: ' + str(pop.getFittest().getDistance()))
 yaxis = []
 xaxis = []
