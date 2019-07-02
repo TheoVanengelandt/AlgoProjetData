@@ -52,7 +52,7 @@ if not os.path.exists('data/'):
     os.makedirs('data/')
     
 # open and create a file
-print('Nom du fichier ?')
+print('Sauvegarder le fichier créé sous ? (ex: monNomDeFichier) \nPS: le format est ajouté automatiquement :)')
 fileName = input()
 dataFileName = str('data/'+ fileName + '.json')
     
@@ -60,4 +60,5 @@ with open(dataFileName, 'a') as outfile:
     json.dump(data, outfile)
 
 
-print("Le fichier de donnée a été généré") 
+print("Le fichier de donnée a été généré")
+input("Press Enter to close...")
