@@ -20,14 +20,15 @@ class Route:
         for dindex in range(RouteManager.numberOfDustbins()):
             self.setDustbin(dindex, RouteManager.getDustbin(dindex))
 
-        random.shuffle(self.route)
+        # random.shuffle make the route start from a random point
+        # random.shuffle(self.route)
 
     def getDustbin(self, index):
         return self.route[index]
 
     def setDustbin(self, index, db):
         self.route[index] = db
-        #self.route.insert(index, db)
+        # self.route.insert(index, db)
         self.fitness = 0
         self.distance = 0
 

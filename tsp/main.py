@@ -27,7 +27,7 @@ pop = Population(RouteManager.numberOfDustbins(), True)
 print('\nInitial distance: ' + str(pop.getFittest().getDistance()))
 yaxis = []
 xaxis = []
-# 40 est le nombre d'evolution que va réaliser l'algorithme
+# Nombre d'evolution que va réaliser l'algorithme
 for i in range(evolutionNumber):
     pop = GA.evolvePopulation(pop)
     fittest = pop.getFittest().getDistance()
