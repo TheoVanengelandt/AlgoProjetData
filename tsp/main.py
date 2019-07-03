@@ -5,8 +5,7 @@ import json
 
 routeManager = RouteManager()
 
-print('Nom du fichier à étudier ? (ex: nomFichier.json)')
-fileName = input()
+fileName = input('Nom du fichier à étudier ? (ex: nomFichier.json) ')
 dataFileName = str('../data/' + fileName)
 
 try:
@@ -22,17 +21,21 @@ except (OSError, IOError) as e:
     input("Press Enter to close...")
 
 
+evolutionNumber = int(input("Combien d'évolution ? (default = 40) ") or  "40")
+
 pop = Population(RouteManager.numberOfDustbins(), True)
-print('Initial distance: ' + str(pop.getFittest().getDistance()))
+print('\nInitial distance: ' + str(pop.getFittest().getDistance()))
 yaxis = []
 xaxis = []
-for i in range(RouteManager.numberOfDustbins()):
+# 40 est le nombre d'evolution que va réaliser l'algorithme
+for i in range(evolutionNumber):
     pop = GA.evolvePopulation(pop)
     fittest = pop.getFittest().getDistance()
     yaxis.append(fittest)
     xaxis.append(i)
     if fittest < 1050:
         break
+
 print('Final distance: ' + str(fittest))
 print('Final Route: ' + pop.getFittest().toString())
 
