@@ -2,6 +2,10 @@ from galogic import *
 import matplotlib.pyplot as plt
 # JSON lib
 import json
+import time
+
+# Début du comptage du temps d'exécutio,
+start_time = time.time()
 
 routeManager = RouteManager()
 
@@ -16,7 +20,8 @@ try:
 
             RouteManager.addDustbin(Dustbin(city['pos'][0], city['pos'][1]))
 
-    evolutionNumber = int(input("Combien d'évolution ? (default = 40) ") or  "40")
+    evolutionNumber = int(
+        input("Combien d'évolution ? (default = 40) ") or "40")
 
     pop = Population(RouteManager.numberOfDustbins(), True)
     print('\nInitial distance: ' + str(pop.getFittest().getDistance()))
@@ -30,10 +35,10 @@ try:
         xaxis.append(i)
         if fittest < 1050:
             break
-    
+
     print('Final distance: ' + str(fittest))
     print('Final Route: ' + pop.getFittest().toString())
-    
+
     fig = plt.figure()
     #plt.ylim(0, 80000)
     plt.plot(xaxis, yaxis, 'r-')
