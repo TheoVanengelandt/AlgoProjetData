@@ -2,10 +2,15 @@ from galogic import *
 import matplotlib.pyplot as plt
 # JSON lib
 import json
+import time
+
+#Début du comptage du temps d'exécutio,
+start_time = time.time()
 
 routeManager = RouteManager()
 
 fileName = input('Nom du fichier à étudier ? (ex: nomFichier.json) ')
+
 dataFileName = str('../data/' + fileName)
 
 try:
@@ -43,3 +48,6 @@ fig = plt.figure()
 #plt.ylim(0, 80000)
 plt.plot(xaxis, yaxis, 'r-')
 plt.show()
+
+# Affichage du temps d execution
+print("Temps d execution : %s secondes ---" % (time.time() - start_time))
