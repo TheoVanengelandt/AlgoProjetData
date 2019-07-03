@@ -1,6 +1,4 @@
 # Don't track content of these folders
 data/
 graph/
-
-
 tsp/__pycache__/
