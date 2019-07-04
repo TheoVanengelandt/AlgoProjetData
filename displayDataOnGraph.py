@@ -55,28 +55,3 @@ def DisplayDataOnGraph(dataFileName, localGraphStorage='graph/'):
     except (OSError, IOError) as e:
         print(str(e) + '!')
         input("Press Enter to close...")
-
-
-def mapPlot(list_city_X,list_city_Y):
-
-    #drawing of point and add ID
-    plt1.figure(2)
-    for i in range(0,len(list_city_X)):
-        plt1.scatter(list_city_X[i],list_city_Y[i],marker = '+')
-        plt1.annotate(i, (list_city_X[i],list_city_Y[i]))
-
-
-    #drawing of segment
-    with open("out_txt/bestroute.txt") as json_file:
-        data_best_route = json.load(json_file)
-
-    listXGraphRoute = []
-    listYGraphRoute = []
-    for (x, y) in data_best_route:
-        listXGraphRoute.append(x)
-        listYGraphRoute.append(y)
-        print("xv "+str(x))
-        print("un"+str(data_best_route[0]))
-    plt1.plot(listXGraphRoute, listYGraphRoute)
-    plt1.show()
-    plt1.savefig('map.png')
