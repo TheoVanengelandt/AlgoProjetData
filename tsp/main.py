@@ -43,6 +43,9 @@ try:
     #plt.ylim(0, 80000)
     plt.plot(xaxis, yaxis, 'r-')
     plt.show()
+    
+    # Affichage du temps d execution
+    print("Temps d execution : %s secondes ---" % (time.time() - start_time))
 
 except (OSError, IOError) as e:
     print(str(e) + '!')
