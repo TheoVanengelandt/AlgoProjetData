@@ -5,10 +5,10 @@ from pylab import *
 # Données de génération des deux courbes
 #Courbe de 10 évolution par exécution
 x = np.array([50, 100, 250, 500, 750, 1000])
-y = np.array([0.4, 6.8, 28.49, 143.84, 405.76, 894.97])
+y = np.array([0.57, 8.64, 27.8,146.79, 410.91, 901.43])
 #Courbe de 50 évolutions par exécutions
 x1 = np.array([50, 100, 250, 500, 750, 1000, ])
-y1 = np.array([9.465, 20.34, 128.41, 711.05, 3612.12, 6567.57 ])
+y1 = np.array([8.9, 21.86, 125.5, 722, 3631.85, 6562 ])
 #Création des courbes
 plt.plot(x, y, x1, y1)
 
