@@ -41,7 +41,7 @@ Il demande 2 entrées à l'utilisateur :
 - Ensuite, aller dans le dossier "tsp/", et lancer le programe "main.py".
 - Il faudra entrer le fichier créé précédement (ex: fichier100villes.json) ainsi que le nombre d'évolution à réaliser.
 - On obient le graph d'évolution de la solution grâce aux évolutions et on nous propose de sauvegarder ce graph.
-- Enfin on peut voir le résultat obtenu gràace à l'algorithme sous forme de nuage de points reliés (Attention, graph petit et donc difficile à interpréter avec beaucoup de valeurs).
+- Enfin on peut voir le résultat obtenu grâce à l'algorithme sous forme de nuage de points reliés (Attention, graph petit et donc difficile à interpréter avec beaucoup de valeurs).
 
 # Equipe
 
