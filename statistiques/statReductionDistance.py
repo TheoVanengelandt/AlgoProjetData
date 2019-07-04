@@ -2,7 +2,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-
+#Définition des valeurs
 distance_initiale, init_std = (4553, 20607, 132579, 517528, 1292198, 2096034), (1, 1, 1, 1, 1,1)
 distance10, dix_std = (3388, 14610, 103337, 429381, 1105820, 1834722), (1, 1, 1, 1, 1, 1)
 distance50, cinquante_std = (2495, 9522,  74550, 314706, 827388, 1473427), (1, 1, 1, 1, 1,1)
@@ -11,6 +11,7 @@ ind = np.arange(len(distance_initiale))  # the x locations for the groups
 width = 0.20  # the width of the bars
 
 fig, ax = plt.subplots()
+#Génération des barres du graphique
 rects1 = ax.bar(ind - width, distance_initiale, width, yerr=init_std,
                 label='Distance initiale')
 rects2 = ax.bar(ind, distance10, width, yerr=dix_std,
@@ -18,7 +19,7 @@ rects2 = ax.bar(ind, distance10, width, yerr=dix_std,
 rects3 = ax.bar(ind + width, distance50, width, yerr=cinquante_std,
                 label='Distance après 50 évolutions')
 
-# Add some text for labels, title and custom x-axis tick labels, etc.
+# Ajout de texte, légendes, unités afin de faciliter la compréhension du graphes
 ax.set_ylabel('Distance')
 ax.set_xlabel('Taille de la population')
 ax.set_title('Réduction de la distance initiale en fonction de la population')
@@ -45,5 +46,5 @@ autolabel(rects2, "center")
 autolabel(rects3, "right")
 
 fig.tight_layout()
-
+#Affichage de la solution
 plt.show()
