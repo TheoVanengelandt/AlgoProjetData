@@ -48,7 +48,7 @@ try:
             break
 
     print('Final distance: ' + str(fittest))
-    #print('Final Route: ' + pop.getFittest().toString())
+    # print('Final Route: ' + pop.getFittest().toString())
 
     # Create an empty dictionary
     data = {}
