@@ -23,7 +23,7 @@ def parseXML(xmlfile):
     for child in root.findall('./network/nodes/'):
          
          data['cityList'][str(i)] = {
-                   str('pos') : [float(child[0].text), float(child[1].text)]
+                   str('pos') : [int(round(float(child[0].text))), int(round(float(child[1].text)))]
                    }
          i += 1 
     
