@@ -1,3 +1,5 @@
+import uuid
+from displayDataOnGraph import DisplayDataOnGraph
 from galogic import *
 # matplotlib lib
 import matplotlib.pyplot as plt
@@ -9,9 +11,7 @@ import os
 # DisplayDataOnGraph method
 import sys
 sys.path.insert(0, '../')
-from displayDataOnGraph import DisplayDataOnGraph
 # UUID generator
-import uuid
 
 # Début du comptage du temps d'exécutio,
 start_time = time.time()
@@ -60,7 +60,7 @@ try:
     for v in range(len(listVille)):
         if listVille[v]:
             data['cityList'][v] = {
-                str('name') : ('ville' + str(v)),
+                str('name'): ('ville' + str(v)),
                 str('pos'): (
                     int(listVille[v].split(",")[0].replace('(', '')),
                     int(listVille[v].split(",")[1].replace(')', ''))
@@ -74,7 +74,7 @@ try:
     #plt.ylim(0, 80000)
     plt.plot(xaxis, yaxis, 'r-')
     plt.show()
-    
+
     # Affichage du temps d execution
     print("Temps d execution : %s secondes ---" % (time.time() - start_time))
 
@@ -82,10 +82,10 @@ try:
         os.makedirs('../rep/')
 
     dataFileName = str('rep/rep' + fileName)
-   
-    if os.path.exists('../'+ dataFileName):
-        dataFileName = str('rep/rep' + uuid.uuid4().hex + '-' + fileName )
-        
+
+    if os.path.exists('../' + dataFileName):
+        dataFileName = str('rep/rep' + uuid.uuid4().hex + '-' + fileName)
+
     with open('../' + dataFileName, 'a') as outfile:
         json.dump(data, outfile)
 
